@@ -43,7 +43,16 @@ puntalink/
 
 El proyecto se puede descargar como un .zip o clonarse por medio de git.
 
-### 2. Iniciar Docker Desktop
+### 2. Docker Desktop
+
+#### 2.1 Instalar Docker Desktop
+
+Este proyecto se levanta por medio de Docker Desktop.
+Descarga Docker Desktop [aquí](https://docs.docker.com/get-started/get-docker/).
+
+Sigue los pasos para la instalación. Luego de la instalación, reinicia tu computador.
+
+#### 2.1 Iniciar Docker Desktop
 
 Docker Desktop se puede iniciar con la interfaz gráfica del sistema operativo o por medio de la consola.
 
@@ -72,6 +81,8 @@ Estos comandos y los del paso 4 se realizan desde la carpeta raíz del proyecto.
         ```cmd
         docker compose logs -f
         ```
+#### 3.1. Acceder a Puntalink
+Para acceder a Puntalink, introduce la dirección http://localhost:3008/ en tu navegador.
 
 ### 4. Detener la aplicación
 

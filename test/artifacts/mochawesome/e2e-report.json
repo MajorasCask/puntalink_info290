@@ -1,0 +1,238 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-06T21:22:25.697Z",
+    "end": "2026-04-06T21:22:33.602Z",
+    "duration": 7905,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "43882caf-adef-4959-888f-23f74185cef1",
+      "title": "",
+      "fullFile": "C:\\Users\\sebas\\OneDrive\\Documentos\\GitHub\\puntalink_info290\\test\\e2e\\ui.smoke.spec.js",
+      "file": "\\test\\e2e\\ui.smoke.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1ec6fb6d-2c37-4e3c-82fa-7b112ee24191",
+          "title": "Frontend e2e auth y proyectos",
+          "fullFile": "C:\\Users\\sebas\\OneDrive\\Documentos\\GitHub\\puntalink_info290\\test\\e2e\\ui.smoke.spec.js",
+          "file": "\\test\\e2e\\ui.smoke.spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Frontend e2e auth y proyectos\"",
+              "fullTitle": "Frontend e2e auth y proyectos \"before all\" hook in \"Frontend e2e auth y proyectos\"",
+              "timedOut": false,
+              "duration": 770,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "ensureArtifactsDir();\napiServer = createMockApiServer();\nawait apiServer.listen(4008);\nconst requestedPort = Number(process.env.E2E_PORT || 3010);\nstaticServer = createStaticServer(frontendPublicDir);\nconst effectivePort = await staticServer.listen(requestedPort);\nbaseUrl = process.env.E2E_BASE_URL || `http://localhost:${effectivePort}`;\ndriver = await createChromeDriver();",
+              "err": {},
+              "uuid": "ef79b83a-30c2-400f-97b5-35bd5a2d097f",
+              "parentUUID": "1ec6fb6d-2c37-4e3c-82fa-7b112ee24191",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"before each\" hook in \"Frontend e2e auth y proyectos\"",
+              "fullTitle": "Frontend e2e auth y proyectos \"before each\" hook in \"Frontend e2e auth y proyectos\"",
+              "timedOut": false,
+              "duration": 585,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "apiServer.reset();\nawait dismissAlertIfPresent(driver);\nawait driver.get(`${baseUrl}/index.html`);\nawait dismissAlertIfPresent(driver);\nawait driver.manage().deleteAllCookies();\nawait driver.executeScript('try { window.localStorage.clear(); window.sessionStorage.clear(); } catch (e) {}');\nawait dismissAlertIfPresent(driver);",
+              "err": {},
+              "uuid": "288a80ff-d788-4606-b93c-373912bd8b29",
+              "parentUUID": "1ec6fb6d-2c37-4e3c-82fa-7b112ee24191",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Frontend e2e auth y proyectos\"",
+              "fullTitle": "Frontend e2e auth y proyectos \"after all\" hook in \"Frontend e2e auth y proyectos\"",
+              "timedOut": false,
+              "duration": 49,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n  await driver.quit();\n}\nif (staticServer) {\n  await staticServer.close();\n}\nif (apiServer) {\n  await apiServer.close();\n}",
+              "err": {},
+              "uuid": "6e258faf-e02b-4d0a-93d0-2966dc8a4f42",
+              "parentUUID": "1ec6fb6d-2c37-4e3c-82fa-7b112ee24191",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"Frontend e2e auth y proyectos\"",
+              "fullTitle": "Frontend e2e auth y proyectos \"after each\" hook in \"Frontend e2e auth y proyectos\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (!driver) return;\nconst shouldCapture = this.currentTest.state === 'failed' || process.env.E2E_CAPTURE_ALL === 'true';\nif (!shouldCapture) return;\nconst testName = safeFileName(this.currentTest.fullTitle());\nconst timestamp = new Date().toISOString().replace(/[:.]/g, '-');\nconst prefix = `${timestamp}_${testName}`;\nconst screenshotPath = path.join(artifactsDir, `${prefix}.png`);\nconst htmlPath = path.join(artifactsDir, `${prefix}.html`);\ntry {\n  const screenshot = await driver.takeScreenshot();\n  fs.writeFileSync(screenshotPath, screenshot, 'base64');\n  const pageSource = await driver.getPageSource();\n  fs.writeFileSync(htmlPath, pageSource, 'utf8');\n  addContext(this, {\n    title: 'Screenshot',\n    value: path.relative(process.cwd(), screenshotPath).replace(/\\\\/g, '/')\n  });\n  addContext(this, {\n    title: 'Page source',\n    value: path.relative(process.cwd(), htmlPath).replace(/\\\\/g, '/')\n  });\n} catch (err) {\n  // No interrumpe el test si falla la captura de evidencia.\n}",
+              "err": {},
+              "uuid": "76371884-e1e6-4d78-9112-c2b503ab9bd9",
+              "parentUUID": "1ec6fb6d-2c37-4e3c-82fa-7b112ee24191",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "inicia sesion correctamente",
+              "fullTitle": "Frontend e2e auth y proyectos inicia sesion correctamente",
+              "timedOut": false,
+              "duration": 1271,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get(`${baseUrl}/index.html`);\nconst activateButton = await driver.wait(until.elementLocated(By.id('craneActivate')), 10000);\nawait activateButton.click();\nconst loginForm = await driver.wait(until.elementLocated(By.id('loginForm')), 10000);\nawait driver.wait(async () => {\n  const className = await loginForm.getAttribute('class');\n  return className.includes('active');\n}, 10000);\nconst buttonText = await activateButton.getText();\nexpect(normalizeText(buttonText)).to.include('GRUA ACTIVA');\nawait driver.executeScript(\"window.onGoogleCredential({ credential: 'fake-google-token' });\");\nawait dismissAlertIfPresent(driver);\nawait driver.wait(async () => {\n  const display = await driver.executeScript(\n    \"return window.getComputedStyle(document.getElementById('mainContent')).display;\"\n  );\n  return display !== 'none';\n}, 10000);\nawait dismissAlertIfPresent(driver);\nconst userEmail = await driver.findElement(By.id('userEmail')).getText();\nexpect(userEmail).to.equal('e2e@puntalink.local');",
+              "err": {},
+              "uuid": "cff712e4-b4fc-4644-b887-0b8ef8895e99",
+              "parentUUID": "1ec6fb6d-2c37-4e3c-82fa-7b112ee24191",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "carga un proyecto desde la lista",
+              "fullTitle": "Frontend e2e auth y proyectos carga un proyecto desde la lista",
+              "timedOut": false,
+              "duration": 1281,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "apiServer.login();\nawait driver.get(`${baseUrl}/index.html`);\nawait dismissAlertIfPresent(driver);\nawait driver.executeAsyncScript(\n  \"const done = arguments[0];\" +\n  \"import('./js/index.js').then((m) => m.loadProjectById('u-e2e-1', 101)).then(() => done(true)).catch((e) => done(String(e)));\"\n);\nawait driver.wait(async () => {\n  const currentUrl = await driver.getCurrentUrl();\n  return currentUrl.includes('/dashboard.html');\n}, 10000);\nconst projectConfig = await driver.executeScript(\n  \"return JSON.parse(window.localStorage.getItem('projectConfig') || '{}');\"\n);\nexpect(projectConfig.pid).to.equal(101);\nexpect(projectConfig.nombre).to.equal('Proyecto E2E Base');",
+              "err": {},
+              "uuid": "3f14a741-2d02-44f6-838e-2c478ed0f3fe",
+              "parentUUID": "1ec6fb6d-2c37-4e3c-82fa-7b112ee24191",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "crea un proyecto nuevo",
+              "fullTitle": "Frontend e2e auth y proyectos crea un proyecto nuevo",
+              "timedOut": false,
+              "duration": 1463,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "apiServer.login();\nawait driver.get(`${baseUrl}/index.html`);\nawait dismissAlertIfPresent(driver);\nawait driver.findElement(By.id('nombreProyecto')).sendKeys('Proyecto Automatizado');\nawait driver.findElement(By.id('empresaConstructora')).sendKeys('Empresa QA');\nawait driver.findElement(By.id('ubicacionProyecto')).sendKeys('Valparaiso');\nawait driver.findElement(By.id('velViento')).sendKeys('125');\nawait driver.findElement(By.id('tempPromedio')).sendKeys('22');\nawait driver.findElement(By.id('presionAtm')).sendKeys('760');\nconst submitButton = await driver.findElement(By.id('btnProjectSubmit'));\nawait driver.executeScript('arguments[0].scrollIntoView({block: \"center\"});', submitButton);\nawait driver.executeScript('arguments[0].click();', submitButton);\nawait driver.wait(async () => {\n  const currentUrl = await driver.getCurrentUrl();\n  return currentUrl.includes('/dashboard.html');\n}, 10000);\nconst projectConfig = await driver.executeScript(\n  \"return JSON.parse(window.localStorage.getItem('projectConfig') || '{}');\"\n);\nexpect(projectConfig.nombre).to.equal('Proyecto Automatizado');\nexpect(projectConfig.empresa).to.equal('Empresa QA');\nexpect(projectConfig.ubicacion).to.equal('Valparaiso');",
+              "err": {},
+              "uuid": "5f2c2049-d59a-4e90-af30-10b5b5fd555d",
+              "parentUUID": "1ec6fb6d-2c37-4e3c-82fa-7b112ee24191",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "carga dashboard y renderiza el bloque principal",
+              "fullTitle": "Frontend e2e auth y proyectos carga dashboard y renderiza el bloque principal",
+              "timedOut": false,
+              "duration": 583,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await driver.get(`${baseUrl}/dashboard.html`);\nawait driver.wait(until.elementLocated(By.id('projectNameHeader')), 10000);\nconst heading = await driver.findElement(By.id('projectNameHeader')).getText();\nconst uploadButton = await driver.findElement(By.id('btnUploadTxt')).getText();\nexpect(normalizeText(heading)).to.equal('Informacion del Proyecto');\nexpect(uploadButton.toLowerCase()).to.include('subir y procesar txt');",
+              "err": {},
+              "uuid": "83b42e89-5da1-4afe-ab94-d2d4c370bf17",
+              "parentUUID": "1ec6fb6d-2c37-4e3c-82fa-7b112ee24191",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cff712e4-b4fc-4644-b887-0b8ef8895e99",
+            "3f14a741-2d02-44f6-838e-2c478ed0f3fe",
+            "5f2c2049-d59a-4e90-af30-10b5b5fd555d",
+            "83b42e89-5da1-4afe-ab94-d2d4c370bf17"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4598,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "e2e-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "test/artifacts/mochawesome",
+        "reportFilename": "e2e-report",
+        "quiet": "true",
+        "overwrite": "true",
+        "html": "true",
+        "json": "true"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

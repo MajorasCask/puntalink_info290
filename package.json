@@ -1,7 +1,31 @@
 {
   "dependencies": {
+    "chai": "^6.2.2",
+    "mocha": "^11.7.5",
+    "mochawesome": "^7.1.4",
     "node": "^24.8.0",
     "pdfkit": "^0.17.2",
+    "selenium-webdriver": "^4.41.0",
     "zod": "^4.1.11"
-  }
+  },
+  "name": "puntalink_info290",
+  "version": "1.0.0",
+  "description": "**PuntaLink** es un sistema web para el análisis y gestión de proyectos estructurales, permitiendo importar archivos `.TXT`, procesar y visualizar datos de muros, realizar cálculos para braces y deadman, y generar reportes.",
+  "main": "test-node-calculo.js",
+  "scripts": {
+    "test": "npm run test:e2e",
+    "test:e2e": "mocha \"test/e2e/**/*.spec.js\" --reporter spec",
+    "test:e2e:headful": "set E2E_HEADFUL=true && npm run test:e2e",
+    "test:e2e:report": "mocha \"test/e2e/**/*.spec.js\" --reporter mochawesome --reporter-options reportDir=test/artifacts/mochawesome,reportFilename=e2e-report,quiet=true,overwrite=true,html=true,json=true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MajorasCask/puntalink_info290.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MajorasCask/puntalink_info290/issues"
+  },
+  "homepage": "https://github.com/MajorasCask/puntalink_info290#readme"
 }

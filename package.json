@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "chai": "^6.2.2",
+    "cross-env": "^7.0.3",
     "mocha": "^11.7.5",
     "mochawesome": "^7.1.4",
     "node": "^24.8.0",
@@ -15,7 +16,17 @@
   "scripts": {
     "test": "npm run test:e2e",
     "test:e2e": "mocha \"test/e2e/**/*.spec.js\" --reporter spec",
-    "test:e2e:headful": "set E2E_HEADFUL=true && npm run test:e2e",
+    "test:e2e:auth": "mocha \"test/e2e/auth.spec.js\" --reporter spec",
+    "test:e2e:proyectos": "mocha \"test/e2e/proyectos.*.spec.js\" --reporter spec",
+    "test:e2e:proyectos:cargar": "mocha \"test/e2e/proyectos.cargar.spec.js\" --reporter spec",
+    "test:e2e:proyectos:crear": "mocha \"test/e2e/proyectos.crear.spec.js\" --reporter spec",
+    "test:e2e:dashboard": "mocha \"test/e2e/dashboard.spec.js\" --reporter spec",
+    "test:e2e:headful": "cross-env E2E_HEADFUL=true npm run test:e2e",
+    "test:e2e:auth:headful": "cross-env E2E_HEADFUL=true npm run test:e2e:auth",
+    "test:e2e:proyectos:headful": "cross-env E2E_HEADFUL=true npm run test:e2e:proyectos",
+    "test:e2e:proyectos:cargar:headful": "cross-env E2E_HEADFUL=true npm run test:e2e:proyectos:cargar",
+    "test:e2e:proyectos:crear:headful": "cross-env E2E_HEADFUL=true npm run test:e2e:proyectos:crear",
+    "test:e2e:dashboard:headful": "cross-env E2E_HEADFUL=true npm run test:e2e:dashboard",
     "test:e2e:report": "mocha \"test/e2e/**/*.spec.js\" --reporter mochawesome --reporter-options reportDir=test/artifacts/mochawesome,reportFilename=e2e-report,quiet=true,overwrite=true,html=true,json=true"
   },
   "repository": {

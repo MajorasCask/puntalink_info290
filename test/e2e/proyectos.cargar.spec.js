@@ -1,4 +1,5 @@
 const { expect } = require('chai');
+const { By } = require('selenium-webdriver');
 const { dismissAlertIfPresent, registerSuiteHooks } = require('./helpers/suiteSetup');
 
 describe('Frontend e2e proyectos - cargar', function () {
@@ -11,6 +12,10 @@ describe('Frontend e2e proyectos - cargar', function () {
     ctx.apiServer.login();
     await ctx.driver.get(`${ctx.baseUrl}/index.html`);
     await dismissAlertIfPresent(ctx.driver);
+    await ctx.driver.sleep(300);
+
+    await ctx.driver.findElement(By.id('btnLoadOldProject')).click();
+    await ctx.driver.sleep(500);
 
     await ctx.driver.executeAsyncScript(
       "const done = arguments[0];" +
@@ -28,5 +33,7 @@ describe('Frontend e2e proyectos - cargar', function () {
 
     expect(projectConfig.pid).to.equal(101);
     expect(projectConfig.nombre).to.equal('Proyecto E2E Base');
+
+    //await ctx.driver.sleep(20000);
   });
 });

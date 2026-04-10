@@ -12,13 +12,21 @@ describe('Frontend e2e proyectos - crear', function () {
     ctx.apiServer.login();
     await ctx.driver.get(`${ctx.baseUrl}/index.html`);
     await dismissAlertIfPresent(ctx.driver);
-
+    await ctx.driver.sleep(300);
+    
     await ctx.driver.findElement(By.id('nombreProyecto')).sendKeys('Proyecto Automatizado');
+    await ctx.driver.sleep(1000);
+
     await ctx.driver.findElement(By.id('empresaConstructora')).sendKeys('Empresa QA');
+    await ctx.driver.sleep(1000);
     await ctx.driver.findElement(By.id('ubicacionProyecto')).sendKeys('Valparaiso');
+    await ctx.driver.sleep(1000);
     await ctx.driver.findElement(By.id('velViento')).sendKeys('125');
+    await ctx.driver.sleep(1000);
     await ctx.driver.findElement(By.id('tempPromedio')).sendKeys('22');
+    await ctx.driver.sleep(1000);
     await ctx.driver.findElement(By.id('presionAtm')).sendKeys('760');
+    await ctx.driver.sleep(1000);
 
     const submitButton = await ctx.driver.findElement(By.id('btnProjectSubmit'));
     await ctx.driver.executeScript('arguments[0].scrollIntoView({block: "center"});', submitButton);

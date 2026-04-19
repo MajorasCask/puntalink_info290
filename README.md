@@ -12,6 +12,44 @@ Desarrollado en Node.js + Express (backend), PostgreSQL (base de datos), y HTML/
 - Cálculo y manejo de muros, braces y deadman.
 - Exportación de reportes.
 
+### Requerimientos
+- Se debe poder calcular la fuerza del viento sobre los muros.
+- Se deben poder guardar proyectos creados.
+- Se debe poder crear un documento en .pdf que detalle los cálculos realizados.
+- Se deben poder calcular la cantidad de materiales necesaria para construir los
+muertos.
+
+### Especificaciones
+- El sistema deberá permitir ingresar los parámetros necesarios para el cálculo de
+viento, incluyendo dimensiones del muro y variables estructurales requeridas, y
+deberá mostrar el resultado del cálculo en pantalla asociado al proyecto activo.
+- El sistema deberá almacenar cada proyecto en una base de datos PostgreSQL,
+registrando como mínimo: identificador del proyecto, usuario asociado, fecha de
+creación, fecha de modificación y datos de entrada utilizados en los cálculos.
+- El sistema deberá generar un archivo PDF por proyecto que incluya: nombre del
+proyecto, fecha de generación, parámetros de entrada, resultados de cálculo de
+viento y estimación de materiales.
+- El sistema deberá calcular la cantidad de materiales por muro y por proyecto,
+mostrando los resultados en tablas con el formato definido por el cliente.
+
+### Requisitos funcionales
+- El sistema debe asociar y diferenciar los proyectos con una cuenta de Google.
+- El sistema debe manejar diferentes versiones de un mismo proyecto.
+
+### Requisitos no funcionales
+- El sistema debe ser desarrollado como un servicio web.
+- Las distintas tablas deben seguir los formatos definidos por el cliente.
+
+### Modelo arquitectónico
+El sistema presenta un modelo arquitectónico de tipo web en tres capas. La capa de
+presentación corresponde al frontend, encargado de la interacción con el usuario; la capa
+de negocio corresponde al backend desarrollado con Node.js y Express, donde se
+implementan las reglas y cálculos del sistema; y la capa de datos corresponde a
+PostgreSQL, utilizada para la persistencia de proyectos y resultados. Además, el despliegue
+mediante Docker Compose evidencia una separación cliente-servidor entre frontend,
+backend y base de datos. Por ello, puede afirmarse que sí existe un modelo arquitectónico,
+aunque no esté formalizado en un diagrama explícito dentro de la documentación principal.
+
 ## Requisitos
 
 - **Node.js** v18+ (LTS recomendado)

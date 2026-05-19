@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-05-19T04:02:01.800Z",
+  "results": {
+    "REQ-PROJ-001": {
+      "files": [
+        "test/projectController.test.ts",
+        "test/projectService.test.ts"
+      ],
+      "covered": true,
+      "exitCode": 0,
+      "stdout": "\n\n  projectController.crearProyecto\n[controller - projectController] crearProyecto - Inicio\n[controller - projectController] crearProyecto - Proyecto creado:\n[controller - projectController] crearProyecto - Fin\n    ✔ responde con el proyecto creado cuando el servicio tiene éxito\n[controller - projectController] crearProyecto - Inicio\n[controller - projectController] crearProyecto - Fin\n    ✔ responde 500 cuando el servicio lanza un error\n\n  projectService\n[service - projectService] crearProyecto - Inicio\n[service - projectService] crearProyecto - Datos recibidos: {\n  id_usuario: 7,\n  nombreProyecto: 'Proyecto A',\n  empresaConstructora: 'Constructora X',\n  tipoMuerto: 'muro',\n  velViento: '120.5',\n  tempPromedio: '25.2',\n  presionAtm: '740.1',\n  ubicacionProyecto: 'Lima'\n}\n[service - projectService] crearProyecto - Proyecto creado exitosamente\n    ✔ crea un proyecto con valores numéricos convertidos\n[service - projectService] actualizarProyecto - Inicio\n[service - projectService] actualizarProyecto - Proyecto actualizado exitosamente\n    ✔ actualiza un proyecto usando el request completo\n[service - projectService] listarProyectos - Inicio\n[service - projectService] listarProyectos - Proyectos obtenidos exitosamente\n    ✔ lista proyectos por usuario y usa fallback\n[service - projectService] cargarProyecto - Inicio\n[service - projectService] cargarProyecto - Proyecto obtenido exitosamente\n[service - projectService] guardarTxt - Inicio\n[service - projectService] guardarTxt - TXT guardado exitosamente\n[service - projectService] nuevaVersion - Inicio\n[service - projectService] nuevaVersion - Nueva versión creada exitosamente\n[service - projectService] eliminarProyecto - Inicio\n[service - projectService] eliminarProyecto - Proyecto eliminado exitosamente\n    ✔ carga, guarda, duplica y elimina proyectos\n\n\n  6 passing (63ms)\n\n",
+      "stderr": "",
+      "error": "",
+      "skipped": false
+    },
+    "REQ-PROJ-002": {
+      "files": [
+        "test/projectService.test.ts"
+      ],
+      "covered": true,
+      "exitCode": 0,
+      "stdout": "\n\n  projectService\n[service - projectService] crearProyecto - Inicio\n[service - projectService] crearProyecto - Datos recibidos: {\n  id_usuario: 7,\n  nombreProyecto: 'Proyecto A',\n  empresaConstructora: 'Constructora X',\n  tipoMuerto: 'muro',\n  velViento: '120.5',\n  tempPromedio: '25.2',\n  presionAtm: '740.1',\n  ubicacionProyecto: 'Lima'\n}\n[service - projectService] crearProyecto - Proyecto creado exitosamente\n    ✔ crea un proyecto con valores numéricos convertidos\n[service - projectService] actualizarProyecto - Inicio\n[service - projectService] actualizarProyecto - Proyecto actualizado exitosamente\n    ✔ actualiza un proyecto usando el request completo\n[service - projectService] listarProyectos - Inicio\n[service - projectService] listarProyectos - Proyectos obtenidos exitosamente\n    ✔ lista proyectos por usuario y usa fallback\n[service - projectService] cargarProyecto - Inicio\n[service - projectService] cargarProyecto - Proyecto obtenido exitosamente\n[service - projectService] guardarTxt - Inicio\n[service - projectService] guardarTxt - TXT guardado exitosamente\n[service - projectService] nuevaVersion - Inicio\n[service - projectService] nuevaVersion - Nueva versión creada exitosamente\n[service - projectService] eliminarProyecto - Inicio\n[service - projectService] eliminarProyecto - Proyecto eliminado exitosamente\n    ✔ carga, guarda, duplica y elimina proyectos\n\n\n  4 passing (47ms)\n\n",
+      "stderr": "",
+      "error": "",
+      "skipped": false
+    },
+    "REQ-PROJ-003": {
+      "files": [
+        "test/projectController.test.ts"
+      ],
+      "covered": true,
+      "exitCode": 0,
+      "stdout": "\n\n  projectController.crearProyecto\n[controller - projectController] crearProyecto - Inicio\n[controller - projectController] crearProyecto - Proyecto creado:\n[controller - projectController] crearProyecto - Fin\n    ✔ responde con el proyecto creado cuando el servicio tiene éxito\n[controller - projectController] crearProyecto - Inicio\n[controller - projectController] crearProyecto - Fin\n    ✔ responde 500 cuando el servicio lanza un error\n\n\n  2 passing (34ms)\n\n",
+      "stderr": "",
+      "error": "",
+      "skipped": false
+    },
+    "REQ-PROJ-004": {
+      "files": [
+        "test/projectController.test.ts"
+      ],
+      "covered": true,
+      "exitCode": 0,
+      "stdout": "\n\n  projectController.crearProyecto\n[controller - projectController] crearProyecto - Inicio\n[controller - projectController] crearProyecto - Proyecto creado:\n[controller - projectController] crearProyecto - Fin\n    ✔ responde con el proyecto creado cuando el servicio tiene éxito\n[controller - projectController] crearProyecto - Inicio\n[controller - projectController] crearProyecto - Fin\n    ✔ responde 500 cuando el servicio lanza un error\n\n\n  2 passing (27ms)\n\n",
+      "stderr": "",
+      "error": "",
+      "skipped": false
+    },
+    "REQ-CALC-001": {
+      "files": [
+        "test/calculosService.test.ts"
+      ],
+      "covered": true,
+      "exitCode": 0,
+      "stdout": "\n\n  calculosService\n    ✔ expone la tabla de parámetros de terreno\n    ✔ clasifica la estructura por altura\n    ✔ recupera parámetros por categoría y alpha por clase\n    ✔ calcula área, volumen y peso\n    ✔ calcula factores de viento intermedios\n[CALCULOS] 🧮 calculateFactorG - FÓRMULA TOMO III:\n[CALCULOS] 📊 Entrada: temp=25°C, presión=750mmHg\n[CALCULOS] 🔢 Fórmula: G = (0.392 × 750) / (273 + 25)\n[CALCULOS] 🔢 Cálculo: 294.00 / 298 = 0.9866\n[CALCULOS] FACTOR G: Factor G (Tomo III): 0.9866\n    ✔ calcula factor G y YCG\n[CALCULOS] CALCULO NFT (Nivel de Piso Terminado):\n[CALCULOS] Nivel Natural Terreno (NNT): 0.100m\n[CALCULOS] Excavacion: 0.020m\n[CALCULOS] Espesor losa: 0.140m (5.5\")\n[CALCULOS] Acabado superficial: 0.020m\n[CALCULOS] NFT = 0.1 - 0.02 + 0.14 + 0.02 = 0.240m\n[CALCULOS] 🔧 CÁLCULO BRACE DETALLADO:\n[CALCULOS] 📏 Altura total muro: 10.00m\n[CALCULOS] 📊 Distancia horizontal: 7.00m\n[CALCULOS] Angulo = arctan(10/7.0020753820970985) = 55.0°\n[CALCULOS]  Ángulo 55.0° en rango óptimo (30°-60°)\n    ✔ calcula NFT y ángulo de brace\n\n\n  7 passing (7ms)\n\n",
+      "stderr": "",
+      "error": "",
+      "skipped": false
+    },
+    "REQ-CALC-002": {
+      "files": [
+        "test/calculosService.test.ts"
+      ],
+      "covered": true,
+      "exitCode": 0,
+      "stdout": "\n\n  calculosService\n    ✔ expone la tabla de parámetros de terreno\n    ✔ clasifica la estructura por altura\n    ✔ recupera parámetros por categoría y alpha por clase\n    ✔ calcula área, volumen y peso\n    ✔ calcula factores de viento intermedios\n[CALCULOS] 🧮 calculateFactorG - FÓRMULA TOMO III:\n[CALCULOS] 📊 Entrada: temp=25°C, presión=750mmHg\n[CALCULOS] 🔢 Fórmula: G = (0.392 × 750) / (273 + 25)\n[CALCULOS] 🔢 Cálculo: 294.00 / 298 = 0.9866\n[CALCULOS] FACTOR G: Factor G (Tomo III): 0.9866\n    ✔ calcula factor G y YCG\n[CALCULOS] CALCULO NFT (Nivel de Piso Terminado):\n[CALCULOS] Nivel Natural Terreno (NNT): 0.100m\n[CALCULOS] Excavacion: 0.020m\n[CALCULOS] Espesor losa: 0.140m (5.5\")\n[CALCULOS] Acabado superficial: 0.020m\n[CALCULOS] NFT = 0.1 - 0.02 + 0.14 + 0.02 = 0.240m\n[CALCULOS] 🔧 CÁLCULO BRACE DETALLADO:\n[CALCULOS] 📏 Altura total muro: 10.00m\n[CALCULOS] 📊 Distancia horizontal: 7.00m\n[CALCULOS] Angulo = arctan(10/7.0020753820970985) = 55.0°\n[CALCULOS]  Ángulo 55.0° en rango óptimo (30°-60°)\n    ✔ calcula NFT y ángulo de brace\n\n\n  7 passing (7ms)\n\n",
+      "stderr": "",
+      "error": "",
+      "skipped": false
+    },
+    "REQ-AUTH-001": {
+      "files": [
+        "test/auth.test.ts"
+      ],
+      "covered": true,
+      "exitCode": 0,
+      "stdout": "\n\n  auth.controller\n    ✔ rechaza credenciales inválidas en el login\n    ✔ hace login Google, guarda usuario y setea cookie\n    ✔ devuelve el usuario de la sesión si el token es válido\n    ✔ devuelve usuario null si el token no existe o es inválido\n    ✔ cierra la sesión borrando la cookie\n\n\n  5 passing (53ms)\n\n",
+      "stderr": "",
+      "error": "",
+      "skipped": false
+    },
+    "REQ-PDF-001": {
+      "files": [],
+      "covered": false,
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "",
+      "error": "",
+      "skipped": true
+    }
+  }
+}

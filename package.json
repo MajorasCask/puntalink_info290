@@ -2,7 +2,6 @@
   "dependencies": {
     "chai": "^6.2.2",
     "cross-env": "^7.0.3",
-    "mocha": "^11.7.5",
     "mochawesome": "^7.1.4",
     "node": "^24.8.0",
     "pdfkit": "^0.17.2",
@@ -38,5 +37,9 @@
   "bugs": {
     "url": "https://github.com/MajorasCask/puntalink_info290/issues"
   },
-  "homepage": "https://github.com/MajorasCask/puntalink_info290#readme"
+  "homepage": "https://github.com/MajorasCask/puntalink_info290#readme",
+  "devDependencies": {
+    "mocha": "^11.7.5",
+    "nyc": "^18.0.0"
+  }
 }

@@ -1,0 +1,34 @@
+{
+  "REQ-PROJ-001": {
+    "desc": "Crear proyecto (POST /api/proyecto/crear)",
+    "tests": ["test/projectController.test.ts", "test/projectService.test.ts"]
+  },
+  "REQ-PROJ-002": {
+    "desc": "Listar proyectos (GET /api/proyecto/listar)",
+    "tests": ["test/projectService.test.ts"]
+  },
+  "REQ-PROJ-003": {
+    "desc": "Cargar proyecto (GET /api/proyecto/cargar)",
+    "tests": ["test/projectController.test.ts"]
+  },
+  "REQ-PROJ-004": {
+    "desc": "Guardar TXT (POST /api/proyecto/guardar-txt)",
+    "tests": ["test/projectController.test.ts"]
+  },
+  "REQ-CALC-001": {
+    "desc": "Calcular cargas viento en muros (POST /api/calculos/viento/calcular-muros)",
+    "tests": ["test/calculosService.test.ts"]
+  },
+  "REQ-CALC-002": {
+    "desc": "Parámetros defecto de viento (GET /api/calculos/viento/parametros-defecto)",
+    "tests": ["test/calculosService.test.ts"]
+  },
+  "REQ-AUTH-001": {
+    "desc": "Login Google (POST /api/auth/google)",
+    "tests": ["test/auth.test.ts"]
+  },
+  "REQ-PDF-001": {
+    "desc": "Generación de PDF (endpoints PDF)",
+    "tests": []
+  }
+}

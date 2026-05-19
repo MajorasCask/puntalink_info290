@@ -12,7 +12,8 @@
     "coverage:requirements": "node scripts/generate-test-coverage-report.js",
     "coverage:requirements:html": "node scripts/generate-requirements-html-report.js",
     "coverage:nyc": "nyc --extension .ts --reporter=lcov --reporter=text npm test",
-    "test_nyc": "nyc --extension .ts --reporter=lcov --reporter=text mocha --require tsx/cjs"
+    "test_nyc": "nyc --extension .ts --reporter=lcov --reporter=text mocha --require tsx/cjs \"test/**/*.test.ts\"",
+    "test_nyc:file": "nyc --extension .ts --reporter=lcov --reporter=text mocha --require tsx/cjs"
 
   },
   "dependencies": {
